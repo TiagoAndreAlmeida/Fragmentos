@@ -7,9 +7,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.fragments.R;
+import com.google.android.material.snackbar.Snackbar;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -28,6 +30,7 @@ public class ConversaFragment extends Fragment {
     private String mParam2;
 
     private TextView textView;
+    private Button button;
 
     public ConversaFragment() {
         // Required empty public constructor
@@ -68,6 +71,24 @@ public class ConversaFragment extends Fragment {
 
         textView = view.findViewById(R.id.textViewConversas);
         textView.setText("Conversa mudado");
+
+        button = view.findViewById(R.id.buttonConversa);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Snackbar.make(view, "Aviso Legal", Snackbar.LENGTH_LONG)
+                        .setAction("Confirmar", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+
+                            }
+                        })
+                        .setActionTextColor(getResources().getColor(R.color.design_default_color_primary_dark))
+                        .show();
+            }
+        });
+
+
         return view;
     }
 }
