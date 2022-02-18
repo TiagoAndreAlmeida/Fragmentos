@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.fragments.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
 /**
@@ -30,7 +31,7 @@ public class ConversaFragment extends Fragment {
     private String mParam2;
 
     private TextView textView;
-    private Button button;
+    private FloatingActionButton floatingActionButton;
 
     public ConversaFragment() {
         // Required empty public constructor
@@ -72,8 +73,8 @@ public class ConversaFragment extends Fragment {
         textView = view.findViewById(R.id.textViewConversas);
         textView.setText("Conversa mudado");
 
-        button = view.findViewById(R.id.buttonConversa);
-        button.setOnClickListener(new View.OnClickListener() {
+        floatingActionButton = view.findViewById(R.id.floatingActionButton);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Snackbar.make(view, "Aviso Legal", Snackbar.LENGTH_LONG)
