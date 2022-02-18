@@ -84,6 +84,7 @@ public class ConversaFragment extends Fragment {
                             }
                         })
                         .setActionTextColor(getResources().getColor(R.color.design_default_color_primary_dark))
+                        .setAnimationMode(Snackbar.ANIMATION_MODE_SLIDE)
                         .show();
             }
         });
